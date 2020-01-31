@@ -29,7 +29,7 @@
 
         // CREATION DES POISSONS AU CLIC
 
-        document.getElementById ("container").addEventListener("click", function (unObjetFourni) {
+        document.getElementById ("container").addEventListener("click", function () {
         // On crée la div poisson et son lien
         var newPoisson = document.createElement("a");
         var poissonLien = document.createElement("div");
@@ -42,13 +42,21 @@
 
     
         // On affecte des propriétés CSS à la div
-        poissonLien.style.width = "10px";
-        poissonLien.style.height = "10px";
-        poissonLien.style.backgroundColor = "red";
-        poissonLien.style.position = "absolute";
+        poissonLien.style.width = "20px";
+        poissonLien.style.height = "20px";
+        poissonLien.style.backgroundColor = "orange";
 
-        // On fait bouger les poissons
+        // Les poissons apparaissent au niveau du click de la souris
 
+        document.getElementById('container').onclick = souris;
+        function souris(event)
+        {
+         var x = event.clientX;
+         var y = event.clientY;
+         poissonLien.style.position = 'absolute';
+         poissonLien.style.left = x + 'px';
+         poissonLien.style.top = y + 'px';
+        }
 
  
 });
