@@ -10,12 +10,53 @@
 
 	</head>
 	<body >
-		  <p></p>
+		  <div id="container">
+          </div>
+          <div id = 'troisieme'></div>
+
  
 
     <script >
         'use strict';
-    </script>
+
+          // CREATION DE LA DIV AQUARIUM
+        var newDiv = document.getElementById("container");
+        // On affecte des propriétés CSS à la div
+        newDiv.style.width = "700px";
+        newDiv.style.height = "500px";
+        newDiv.style.margin = "auto";
+        newDiv.style.background = "linear-gradient(#33FFFF, #0066FF)";
+
+        // CREATION DES POISSONS AU CLIC
+
+        document.getElementById ("container").addEventListener("click", function (unObjetFourni) {
+        // On crée la div poisson et son lien
+        var newPoisson = document.createElement("a");
+        var poissonLien = document.createElement("div");
+        newPoisson.href = poissonLien;
+
+        newPoisson.appendChild(poissonLien);
+
+        var currentDiv = document.getElementById('container');
+        currentDiv.appendChild(poissonLien);
+
+    
+        // On affecte des propriétés CSS à la div
+        poissonLien.style.width = "10px";
+        poissonLien.style.height = "10px";
+        poissonLien.style.backgroundColor = "red";
+        poissonLien.style.position = "absolute";
+
+        // On fait bouger les poissons
+
+
+ 
+});
+    
+
+
+ 
+       </script>
 
 
 	</body>
